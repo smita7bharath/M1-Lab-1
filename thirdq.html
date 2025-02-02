@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Flip Game Redux</title>
+</head>
+<body>
+    <h1>Coin Flip Game Redux</h1>
+    <p>Results:</p>
+    <ul id="results"></ul>
+    <script>
+        // Create a variable for the coin flip
+        let coinFlip;
+
+        // Get the results list element
+        const resultsList = document.getElementById('results');
+
+        // Loop 10 times to simulate 10 coin flips
+        for (let i = 0; i < 10; i++) {
+            // Generate a random number and round it to either 0 or 1
+            coinFlip = Math.round(Math.random());
+
+            // Check the result and display "Heads" or "Tails"
+            let result = coinFlip === 0 ? "Heads" : "Tails";
+            let listItem = document.createElement('li');
+            listItem.textContent = result;
+            resultsList.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>
